@@ -3,106 +3,126 @@
 
 
 
-# 🛡️ PhishScope
+🛡️ PhishScope
+PhishScope es una herramienta OSINT defensiva desarrollada para Blue Teams y analistas SOC. Permite analizar grandes volúmenes de correos .eml y detectar phishing, incluso sin enlaces maliciosos visibles.
 
-**PhishScope** es una herramienta OSINT defensiva diseñada para Blue Teams y analistas SOC. Permite analizar grandes volúmenes de correos `.eml` en busca de phishing, incluso sin enlaces maliciosos visibles.
+⚙️ Características principales
+✅ Análisis contextual con NLP (embeddings semánticos)
+✅ Extracción y resolución de URLs (incluye redirecciones)
+✅ Verificación de autenticidad del remitente (SPF, DKIM, DMARC)
+✅ Detección de adjuntos sospechosos y generación de hash SHA256
+✅ PhishScore configurable por múltiples señales
+✅ Exportación a Excel con colores por nivel de riesgo
+✅ Procesamiento por lotes de archivos .eml
 
----
+💻 Instalación por sistema operativo
+🪟 Windows
+🧱 Requisitos
+Python 3.9+ (instalar desde https://www.python.org/downloads/windows/)
 
-## 🧠 Características destacadas
+PowerShell o CMD
 
-✅ Análisis contextual del contenido (NLP + embeddings semánticos)  
-✅ Verificación de autenticidad del remitente (SPF, DKIM, DMARC)  
-✅ Análisis de adjuntos por extensión y SHA256  
-✅ Extracción y resolución de URLs (incl. redirecciones encadenadas)  
-✅ PhishScore multivariable configurable  
-✅ Exportación visual a Excel con colores por nivel de riesgo  
-✅ Procesamiento por lotes de correos `.eml`
+Git (opcional)
 
----
+📦 Instalación paso a paso
+powershell
+Copiar
+Editar
+# Clona el repositorio
+git clone https://github.com/U7Dani/PhishScope.git
+cd PhishScope
 
-## 📦 Requisitos
-
-- Python 3.9 o superior
-- Instalar dependencias:
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## 📁 Estructura
-
-```
-phiscope_core/
-├── email/                   # Carpeta para los archivos .eml
-├── phiscope_batch.py        # Script principal de análisis
-├── resultados_phishscope.xlsx # Excel generado con resultados
-├── requirements.txt         # Dependencias necesarias
-```
-
----
-
-## ▶️ Cómo usar
-
-1. Coloca tus correos `.eml` en la carpeta `email/`
-2. Activa tu entorno virtual:
-```bash
+# Crea y activa un entorno virtual
+py -3 -m venv .venv
 .venv\Scripts\activate
-```
-3. Ejecuta el análisis:
-```bash
+
+# Instala dependencias
+pip install -r requirements.txt
+🐧 Linux / macOS
+🧱 Requisitos
+Python 3.9+ (sudo apt install python3.9 python3.9-venv en Ubuntu)
+
+Git
+
+pip (python3 -m ensurepip)
+
+curl (opcional, para resolución de redirecciones)
+
+📦 Instalación paso a paso
+bash
+Copiar
+Editar
+git clone https://github.com/U7Dani/PhishScope.git
+cd PhishScope
+
+# Crea y activa el entorno virtual
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Instala las dependencias
+pip install -r requirements.txt
+📁 Estructura del proyecto
+bash
+Copiar
+Editar
+PhishScope/
+├── email/                        # Carpeta donde se colocan los archivos .eml
+├── phiscope_batch.py            # Script principal de análisis
+├── resultados_phishscope.xlsx   # Resultado en Excel con colores
+├── requirements.txt             # Lista de dependencias
+├── README.md
+▶️ ¿Cómo usar?
+Coloca tus correos .eml en la carpeta email/.
+
+Activa el entorno virtual:
+
+Windows: .venv\Scripts\activate
+
+Linux/macOS: source .venv/bin/activate
+
+Ejecuta el análisis:
+
+bash
+Copiar
+Editar
 python phiscope_batch.py
-```
-4. Abre `resultados_phishscope.xlsx` para ver el análisis con formato condicional.
-
----
-
-## 🧪 PhishScore
-
-Sistema de puntuación basado en múltiples factores:
-
-| Factor                         | Peso aproximado |
-|-------------------------------|------------------|
-| Patrones NLP (urgencia, etc.) | 30%              |
-| Enlaces acortados/redirigidos | 20%              |
-| Adjuntos sospechosos          | 15%              |
-| Headers técnicos              | 15%              |
-| SPF/DKIM/DMARC inválidos      | 20%              |
-
----
-
-## 📊 Niveles de riesgo
-
-| Score       | Riesgo                | Color   |
-|-------------|------------------------|---------|
-| 0 - 29      | Limpio                 | 🟩 Verde |
-| 30 - 49     | Sospechoso             | 🟨 Amarillo |
-| 50 - 69     | Posible phishing       | 🟧 Naranja |
-| 70 - 100    | Phishing muy probable  | 🟥 Rojo |
-
----
+Abre resultados_phishscope.xlsx para visualizar los resultados con colores por nivel de riesgo.
 
 
-![image](https://github.com/user-attachments/assets/923048c2-341f-4527-bacd-9973135636f3)
+🧪 ¿Cómo funciona PhishScore?
+Factor	Peso estimado
+Patrones NLP (urgencia, etc.)	30%
+Enlaces redirigidos/acortados	20%
+Adjuntos peligrosos	15%
+Headers anómalos (Reply-To)	15%
+SPF/DKIM/DMARC inválidos	20%
 
-## 🔒 Privacidad
+📊 Niveles de riesgo (colores en Excel)
+Score	Riesgo	Color Excel
+0 – 29	Limpio	🟩 Verde
+30 – 49	Sospechoso	🟨 Amarillo
+50 – 69	Posible phishing	🟧 Naranja
+70 – 100	Phishing muy probable	🟥 Rojo
 
-No se requiere conexión a servicios externos salvo para resolver redirecciones o verificar autenticidad DNS.
+![image](https://github.com/user-attachments/assets/6029dee9-bd4a-44cf-b84f-a0dfdb548317)
 
----
 
-## 📅 Última actualización
-2025-05-12
+🔒 Privacidad y seguridad
+La herramienta no envía contenido sensible a servicios externos.
 
----
+Las únicas conexiones que realiza son:
 
-## 📄 Licencia
+Resolución de DNS pública (SPF/DKIM/DMARC)
 
+Peticiones HTTP HEAD para resolver redirecciones
+
+📅 Última actualización
+📆 12 de mayo de 2025
+
+📄 Licencia
 Este proyecto está bajo la Licencia MIT.
+Libre para modificar, estudiar y usar en ambientes defensivos o educativos.
 
----
-
-## 🙋 ¿Preguntas o sugerencias?
-
-Abre un issue o escríbeme si quieres colaborar.
+🙋 Contacto y colaboración
+¿Ideas? ¿Colaboraciones?
+Puedes abrir un issue en el repositorio o escribirme por LinkedIn.
