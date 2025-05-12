@@ -67,7 +67,8 @@ source .venv/bin/activate
 
 # Instala las dependencias
 pip install -r requirements.txt
-📁 Estructura del proyecto
+
+📁 Estructura del proyecto 
 bash
 Copiar
 Editar
@@ -82,10 +83,18 @@ Coloca tus correos .eml en la carpeta email/.
 
 Activa el entorno virtual:
 
-Windows: .venv\Scripts\activate
+Windows:
 
-Linux/macOS: source .venv/bin/activate
+bash
+Copiar
+Editar
+.venv\Scripts\activate
+Linux/macOS:
 
+bash
+Copiar
+Editar
+source .venv/bin/activate
 Ejecuta el análisis:
 
 bash
