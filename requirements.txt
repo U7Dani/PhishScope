@@ -1,0 +1,7 @@
+pandas
+tldextract
+dnspython
+requests
+beautifulsoup4
+sentence-transformers
+openpyxl

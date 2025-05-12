@@ -1,0 +1,11 @@
+# Entorno virtual
+.venv/
+__pycache__/
+*.pyc
+
+# Archivos generados
+resultados_phishscope.xlsx
+
+# Datos sensibles
+*.eml
+email/
