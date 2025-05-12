@@ -83,6 +83,9 @@ Sistema de puntuación basado en múltiples factores:
 
 ---
 
+
+![image](https://github.com/user-attachments/assets/923048c2-341f-4527-bacd-9973135636f3)
+
 ## 🔒 Privacidad
 
 No se requiere conexión a servicios externos salvo para resolver redirecciones o verificar autenticidad DNS.
