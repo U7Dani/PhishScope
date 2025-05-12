@@ -33,7 +33,7 @@
 
 #### 📦 Instalación paso a paso
 
-```powershell
+powershell
 # Clona el repositorio
 git clone https://github.com/U7Dani/PhishScope.git
 cd PhishScope
