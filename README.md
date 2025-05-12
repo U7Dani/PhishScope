@@ -68,55 +68,63 @@ source .venv/bin/activate
 # Instala las dependencias
 pip install -r requirements.txt
 
-📁 Estructura del proyecto 
-bash
-Copiar
-Editar
+### 📁 Estructura del proyecto
+```bash
 PhishScope/
 ├── email/                        # Carpeta donde se colocan los archivos .eml
 ├── phiscope_batch.py            # Script principal de análisis
 ├── resultados_phishscope.xlsx   # Resultado en Excel con colores
 ├── requirements.txt             # Lista de dependencias
 ├── README.md                    # Documentación
-▶️ ¿Cómo usar?
-Coloca tus correos .eml en la carpeta email/.
+```
 
-Activa el entorno virtual:
+---
 
-Windows:
+### ▶️ ¿Cómo usar?
+1. Coloca tus correos `.eml` en la carpeta `email/`.
 
-bash
-Copiar
-Editar
+2. Activa el entorno virtual:
+
+**Windows:**
+```bash
 .venv\Scripts\activate
-Linux/macOS:
+```
 
-bash
-Copiar
-Editar
+**Linux/macOS:**
+```bash
 source .venv/bin/activate
-Ejecuta el análisis:
+```
 
-bash
-Copiar
-Editar
+3. Ejecuta el análisis:
+```bash
 python phiscope_batch.py
-Abre resultados_phishscope.xlsx para visualizar el análisis con colores según el nivel de riesgo.
+```
 
-🧪 ¿Cómo funciona el PhishScore?
-Factor	Peso estimado
-Patrones NLP (urgencia, etc.)	30%
-Enlaces redirigidos/acortados	20%
-Adjuntos peligrosos	15%
-Headers anómalos (Reply-To)	15%
-SPF/DKIM/DMARC inválidos	20%
+4. Abre `resultados_phishscope.xlsx` para visualizar el análisis con colores según el nivel de riesgo.
 
-📊 Niveles de riesgo (colores en Excel)
-Score	Riesgo	Color
-0 – 29	Limpio	🟩 Verde
-30 – 49	Sospechoso	🟨 Amarillo
-50 – 69	Posible phishing	🟧 Naranja
-70 – 100	Phishing muy probable	🟥 Rojo
+---
+
+### 🧪 ¿Cómo funciona el PhishScore?
+
+| Factor                         | Peso estimado |
+|-------------------------------|---------------|
+| Patrones NLP (urgencia, etc.) | 30%           |
+| Enlaces redirigidos/acortados | 20%           |
+| Adjuntos peligrosos           | 15%           |
+| Headers anómalos (Reply-To)   | 15%           |
+| SPF/DKIM/DMARC inválidos      | 20%           |
+
+---
+
+### 📊 Niveles de riesgo (colores en Excel)
+
+| Score     | Riesgo                | Color   |
+|-----------|------------------------|---------|
+| 0 – 29    | Limpio                 | 🟩 Verde     |
+| 30 – 49   | Sospechoso             | 🟨 Amarillo  |
+| 50 – 69   | Posible phishing       | 🟧 Naranja   |
+| 70 – 100  | Phishing muy probable  | 🟥 Rojo      |
+
 
 ![image](https://github.com/user-attachments/assets/88d71699-013c-4737-97eb-ccac10ea19af)
 
