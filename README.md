@@ -149,3 +149,4 @@ Libre para modificar, estudiar y usar en entornos defensivos o educativos.
 ¿Ideas? ¿Sugerencias? ¿Colaboraciones?
 
 👉 Abre un issue en el repositorio o contacta por LinkedIn.
+   https://www.linkedin.com/in/danielsánchezgarcía/
