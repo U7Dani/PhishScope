@@ -1,3 +1,7 @@
+![image](https://github.com/user-attachments/assets/a5297153-e9c3-425d-84c5-95bdf72aac8e)
+
+
+
 # 🛡️ PhishScope
 
 **PhishScope** es una herramienta OSINT defensiva diseñada para Blue Teams y analistas SOC. Permite analizar grandes volúmenes de correos `.eml` en busca de phishing, incluso sin enlaces maliciosos visibles.
