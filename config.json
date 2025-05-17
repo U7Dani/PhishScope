@@ -1,0 +1,12 @@
+{
+  "EMAIL_DIR": "email",
+  "SALIDA_XLSX": "resultados_phishscope.xlsx",
+  "ACORTADORES": ["bit.ly", "tinyurl.com", "t.co", "goo.gl"],
+  "EXT_PELIGROSAS": [".exe", ".vbs", ".js", ".scr", ".bat", ".com", ".pif", ".jar", ".wsf", ".hta", ".iso", ".xlsm"],
+  "PATRONES": {
+    "urgencia": ["responda urgentemente", "acción requerida", "urgente", "inicie sesión ahora"],
+    "autoridad": ["equipo de seguridad", "soporte técnico", "cuenta oficial"],
+    "recompensa": ["ha ganado", "reembolso disponible", "oferta limitada"],
+    "castigo": ["suspenderemos su cuenta", "será bloqueado", "último aviso"]
+  }
+}
