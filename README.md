@@ -1,4 +1,5 @@
 # 📄 README.md — PhishScope
+![442699365-a5297153-e9c3-425d-84c5-95bdf72aac8e](https://github.com/user-attachments/assets/6a13eb42-32b0-47b5-a414-8d4893a8c0a0)
 
 ## 🛡️ ¿Qué es PhishScope?
 PhishScope es una herramienta OSINT defensiva diseñada para Blue Teams y analistas SOC que permite analizar grandes volúmenes de correos `.eml` y `.msg` para detectar amenazas de phishing, incluso si no contienen enlaces maliciosos visibles.
@@ -120,6 +121,8 @@ El resultado estará en `resultados_phishscope.xlsx` con colores según el riesg
 | 30–49         | Sospechoso              | 🟨 Amarillo|
 | 50–69         | Posible phishing        | 🟧 Naranja |
 | 70–100        | Phishing muy probable   | 🟥 Rojo    |
+
+![image](https://github.com/user-attachments/assets/caf5444d-de17-4594-9cfb-e2212d3abf11)
 
 ---
 
